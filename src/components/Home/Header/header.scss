@@ -1,0 +1,172 @@
+@import "../../../assets/style/variables";
+@import "../../../assets/style/global.scss";
+
+.header {
+  width: 100%;
+  margin-top: 80px;
+  height: calc(100vh - 80px);
+  position: relative;
+  background: url(../../../assets/img/home-cover.jpg);
+  background-position: center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: $global-color-primary;
+
+  &-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 30%;
+    right: 9.5%;
+    @include mobile {
+      top: 15% !important;
+    }
+    @include nokia {
+      top: 5% !important;
+    }
+
+    h1 {
+      font-size: 82px;
+      line-height: 100px;
+      text-transform: uppercase;
+      letter-spacing: 2.2px;
+      text-align: center;
+      text-shadow: 1px 3px 11px rgb(0 0 0 / 30%);
+      margin: 0;
+      margin-bottom: 40px;
+      font-family: $font-family-popins, sans-serif;
+      font-weight: 600;
+      word-wrap: break-word;
+      width: 90%;
+      @include nokia {
+        line-height: 30px !important;
+        font-size: 20px !important;
+      }
+    }
+
+    h2 {
+      font-size: 28px;
+      text-transform: uppercase;
+      letter-spacing: 2.2px;
+      margin: 0;
+      font-weight: 500;
+      color: $global-color-secondary;
+      @include nokia {
+        line-height: 25px !important;
+        font-size: 14px !important;
+      }
+    }
+  }
+
+  .next-page {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    a {
+      font-size: 50px;
+      color: #fff;
+      
+    }
+  }
+}
+@media (max-width: 1750px) {
+  .header {
+    &-content {
+      right: 6%;
+    }
+  }
+}
+
+@media (max-width: 1550px) {
+  .header {
+    &-content {
+      top: 27.5%;
+
+      h1 {
+        font-size: 64px;
+        line-height: 88px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .header {
+    height: calc(100vh - 60px);
+    &-content {
+      top: 27.5%;
+
+      h1 {
+        font-size: 54px;
+        line-height: 72px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+    }
+
+    .next-page {
+      a {
+        font-size: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .header {
+    &-content {
+      right: 6%;
+      h1 {
+        font-size: 40px;
+      }
+      h2 {
+        font-size: 16px;
+      }
+    }
+    .next-page {
+      left: 47%;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .header {
+    &-content {
+      right: 6%;
+      h1 {
+        font-size: 30px;
+        line-height: 50px;
+        margin-bottom: 10px;
+      }
+      h2 {
+        font-size: 16px;
+        text-align: center;
+      }
+    }
+    
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    &-content {
+      right: 6%;
+      h1 {
+        font-size: 25px;
+      }
+      h2 {
+        font-size: 14px;
+        text-align: center;
+      }
+    }
+  }
+}

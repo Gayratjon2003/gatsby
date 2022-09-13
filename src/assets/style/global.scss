@@ -1,0 +1,76 @@
+@import "./variables";
+
+* {
+  box-sizing: border-box;
+  color: $global-color-primary;
+  font-family: $font-family-roboto-mono, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: $background-color-primary;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+$width2: 400px;
+$width: 768px;
+$width1: 990px;
+
+@mixin nokia {
+  @media (max-width: #{$width2}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$width1}) {
+    @content;
+  }
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  // box-shadow: inset 0 0 6px #000;
+  background: #434343;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 10px;
+
+  // outline: 1px solid slategrey;
+}
+
+@media (max-width: 1400px) {
+  .container {
+    max-width: 1024px;
+  }
+}

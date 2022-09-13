@@ -1,0 +1,115 @@
+@import "../../../assets/style/variables";
+@import "../../../assets/style/global.scss";
+
+.contact {
+  width: 100%;
+  margin-top: 80px;
+  height: calc(100vh - 80px);
+  // position: relative;
+  background: url(../../../assets/img/home-cover.jpg);
+  background-position: center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: $global-color-primary;
+
+  &_content {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    flex-direction: column;
+    // position: absolute;
+    // top: 25%;
+    // right: 20%;
+    margin-left: 30%;
+    padding-top: 5%;
+
+    h3 {
+      font-size: 48px;
+      text-transform: uppercase;
+      text-align: center;
+      text-shadow: 1px 3px 11px rgb(0 0 0 / 30%);
+      color: $global-color-secondary;
+      font-family: $font-family-popins, sans-serif;
+      word-wrap: break-word;
+      margin-bottom: 60px;
+      @include mobile {
+        font-size: 35px;
+        margin-bottom: 30px;
+      }
+      @include nokia {
+        font-size: 25px;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: 25px;
+      align-items: center;
+      @include nokia {
+        row-gap: 15px;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+        font-size: 24px;
+        @include mobile {
+          font-size: 18px;
+        }
+        @include nokia {
+          font-size: 15px;
+          column-gap: 10px;
+        }
+        i {
+          font-size: 32px;
+          color: $global-color-secondary;
+          @include mobile {
+            font-size: 20px;
+          }
+        }
+
+        a {
+          font-size: 24px;
+          color: $global-color-primary;
+          @include mobile {
+            font-size: 18px;
+          }
+          @include nokia {
+            font-size: 15px;
+          }
+        }
+      }
+
+      .social_networks {
+        margin-top: 30px;
+
+        i {
+          font-size: 36px;
+          color: $global-color-primary;
+          transition: all 0.2s ease;
+          cursor: pointer;
+          @include mobile {
+            font-size: 25px;
+          }
+          @include nokia {
+            font-size: 20px;
+          }
+          &:hover {
+            color: $global-color-secondary;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .contact {
+
+    &_content {
+      margin-left: 5% !important;
+    }
+  }
+}

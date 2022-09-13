@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+$background-color-primary: linear-gradient(
+  90deg,
+  rgba(51, 51, 51, 1) 0%,
+  rgba(66, 66, 66, 1) 100%
+);
+
+$background-color-secondary: linear-gradient(
+  90deg,
+  rgba(37, 37, 37, 1) 0%,
+  rgba(38, 38, 38, 1) 100%
+);
+
+$contentWidth: 1440px;
+
+$global-color-primary: #fff;
+$global-color-secondary: #25cae7;
+$global-color-hover: #3fafd4;
+$global-color-text: #a5a5a5;
+// $global-color-secondary: #54595f;
+$global-color-accent: #61ce70;
+$global-color-8173635: #b7f;
+$global-color-3e3c75b: #2c3599;
+
+$font-family-popins: "Poppins";
+$font-family-roboto-mono: "Roboto Mono";

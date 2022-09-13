@@ -1,0 +1,244 @@
+@import "../../../assets/style/variables";
+@import "../../../assets/style/global.scss";
+
+.expertise {
+  padding-bottom: 90px;
+}
+
+.introduce {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 90px;
+
+  h2 {
+    font-family: $font-family-popins;
+    font-size: 54px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 28px;
+    line-height: 42px;
+    text-align: center;
+    font-weight: 400;
+    @include tablet {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.skills {
+  margin-top: 60px;
+
+  &-box {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    background-color: transparent;
+    @include mobile {
+      flex-wrap: wrap;
+    }
+    .card {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      border: 1px solid $global-color-primary;
+      color: $global-color-primary;
+
+      @include mobile {
+        margin-bottom: 10px;
+        border-radius: 12px;
+      }
+      .blog {
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+
+        &-top {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+
+          span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 45px;
+
+          }
+
+          h2 {
+            font-size: 24px;
+            font-family: $font-family-popins;
+            color: $global-color-secondary;
+            margin-top: 20px;
+            text-align: center;
+          }
+
+          p {
+            font-size: 18px;
+            line-height: 28px;
+            font-style: normal;
+            text-align: center;
+            margin-top: 15px;
+            font-family: $font-family-popins;
+          }
+        }
+
+        &-center {
+          text-align: center;
+
+          &-title {
+            font-size: 20px;
+            color: $global-color-secondary;
+            font-family: $font-family-popins;
+            margin-bottom: 20px;
+          }
+
+          &-text {
+            font-size: 18px;
+            line-height: 28px;
+          }
+        }
+      }
+    }
+    .card-1 {
+      // border-left: 1px solid #e6ecf8;
+      border-bottom-left-radius: 12px;
+      border-top-left-radius: 12px;
+
+      @include mobile {
+        border-radius: 12px;
+      }
+    }
+    .card-3 {
+      border-bottom-right-radius: 12px;
+      border-top-right-radius: 12px;
+      @include mobile {
+        border-radius: 12px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1550px) {
+  .introduce {
+    h2 {
+      font-size: 48px;
+    }
+
+    p {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .expertise {
+    padding-bottom: 60px;
+  }
+  
+  .introduce {
+    h2 {
+      font-size: 42px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 36px;
+    }
+  }
+
+  .skills {
+    margin-top: 60px;
+    &-box {
+      .card {
+        .blog {
+          &-top {
+            span {
+              i {
+                font-size: 50px;
+              }
+            }
+
+            h2 {
+              font-size: 20px;
+            }
+
+            p {
+              font-size: 16px;
+            }
+          }
+
+          &-center {
+            &-title {
+              font-size: 18px;
+            }
+            &-text {
+              font-size: 16px;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .expertise {
+    padding-bottom: 60px;
+  }
+  
+  .introduce {
+    h2 {
+      font-size: 25px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 36px;
+    }
+  }
+
+  .skills {
+    margin-top: 60px;
+    &-box {
+      .card {
+        .blog {
+          &-top {
+            span {
+              i {
+                font-size: 50px;
+              }
+            }
+
+            h2 {
+              font-size: 20px;
+            }
+
+            p {
+              font-size: 16px;
+            }
+          }
+
+          &-center {
+            &-title {
+              font-size: 18px;
+            }
+            &-text {
+              font-size: 16px;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

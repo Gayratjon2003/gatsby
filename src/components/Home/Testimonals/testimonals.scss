@@ -1,0 +1,143 @@
+@import "../../../assets/style/variables";
+
+.testimonals {
+  padding:0;
+  padding-bottom: 150px;
+
+  &-title {
+    font-size: 54px;
+    font-family: $font-family-popins;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &-text {
+    font-size: 26px;
+    line-height: 28px;
+    text-align: center;
+    margin-bottom: 120px;
+  }
+
+  .swiper {
+    width: 90%;
+    .swiper-pagination-horizontal {
+      bottom: 0px !important;
+    }
+    &-wrapper {
+      // width: 10%;
+      .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+          width: 85px;
+          height: 85px;
+          border-radius: 50%;
+        }
+
+        .text {
+          margin-top: 50px;
+          font-size: 20px;
+          line-height: 36px;
+          text-align: center;
+          font-family: $font-family-popins;
+        }
+
+        .name {
+          font-size: 28px;
+          font-family: $font-family-popins;
+          margin-top: 30px;
+          color: $global-color-secondary;
+        }
+
+        .role {
+          font-size: 18px;
+          margin-top: 8px;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1550px) {
+  .testimonals {
+    &-title {
+      font-size: 48px;
+    }
+
+    &-text {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .testimonals {
+    &-title {
+      font-size: 42px;
+    }
+
+    &-text {
+      font-size: 22px;
+      margin-bottom: 90px;
+    }
+
+    .swiper {
+      &-wrapper {
+        .swiper-slide {
+          img {
+            width: 60px;
+            height: 60px;
+          }
+
+          .text {
+            font-size: 16px;
+            margin-top: 30px;
+          }
+
+          .name {
+            font-size: 24px;
+          }
+
+          .role {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .testimonals {
+    .swiper-slide  {
+      p {
+       line-height: 20px !important;
+      }
+    }
+    &-title {
+      font-size: 35px !important;
+    }
+
+    &-text {
+      font-size: 20px !important;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonals {
+    &-title {
+      font-size: 25px !important;
+    }
+
+    &-text {
+      font-size: 18px !important;
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+  }
+}
