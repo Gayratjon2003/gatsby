@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import './blogs.scss'
-import React from 'react'
-import axios from "axios";
+// import axios from "axios";
+import {blogData} from '../Blog/blogdata';
+import Navbar from '../navbar/Navbar';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import SyntaxHighlighter from 'react-syntax-highlighter/dist/esm/default-highlight';
 import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -15,14 +16,14 @@ const Blogs = () => {
     const language = "javascript";
     const headerId = itemId;
     const forItemId = id;
-    const [forHeaderId, setForHeaderId] = useState(0);
     const [showRichText, setShowRichText] = useState('');
     useEffect(() => {
-        axios.get(url)
-            .then(res => {
-                const [bigData] = res?.data?.data;
-                setRichText(bigData?.attributes?.blog);
-            })
+        // axios.get(url)
+        //     .then(res => {
+        //         const [bigData] = res?.data?.data;
+        //         setRichText(bigData?.attributes?.blog);
+        //     })
+        richText(blogData)
        
     }, [])
     function showRichText1() {richText.map(item => {
@@ -36,10 +37,8 @@ const Blogs = () => {
     })}
 
     return (
-
-
         <div className="markdown">
-
+            <Navbar />
             <div className='markdown-container'>
                 <ReactMarkdown
 

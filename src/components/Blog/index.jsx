@@ -39,14 +39,9 @@ function Blog() {
                         <p>{i.data}</p>
                       </div>
                       <div className="card-body">
-                        <Link to={`/markdown/${i.id}/${item.id}`}>
+                        <Link to={`/markdown`} state={{id: item.id, itemId:  i.id} }>
                           {i.title}
                         </Link>
-                        {/* <Link to={`/markdown`} id={2}>
-                          {i.title}
-                        </Link> */}
-
-                        
                       </div>
                       <div className="card-footer">
                         <a href='#'>{item.projectFooter}</a>
